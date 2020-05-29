@@ -1,4 +1,4 @@
-package com.xiangmu.gmall.gmalluser;
+package com.xiangmu.gmall.user;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package com.xiangmu.gmall.gmalluser;
+package com.xiangmu.gmall.user;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
