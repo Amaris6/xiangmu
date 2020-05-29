@@ -1,8 +1,12 @@
 package com.xiangmu.gmall.user.service.impl;
 
+import com.xiangmu.gmall.user.bean.UmsMember;
+import com.xiangmu.gmall.user.mapper.UserMapper;
 import com.xiangmu.gmall.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * @program: xiangmu
@@ -13,5 +17,12 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserServiceImpl implements UserService {
     @Autowired
-    UserService userService;
+    UserMapper userMapper;
+
+    @Override
+    public List<UmsMember> getAllUser() {
+
+        List<UmsMember> umsMemberList =userMapper.selectAll() ;//userMapper.selectAllUser();
+        return umsMemberList;
+    }
 }
