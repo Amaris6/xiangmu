@@ -1,7 +1,8 @@
 package com.xiangmu.gmall.user.contorller;
 
-import com.xiangmu.gmall.user.bean.UmsMember;
-import com.xiangmu.gmall.user.service.UserService;
+import com.xiangmu.gmall.service.UserService;
+import com.xiangmu.gmall.bean.UmsMember;
+import com.xiangmu.gmall.bean.UmsMemberReceiveAddress;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,6 +28,11 @@ public class UserContorller {
         return umsMembers;
     }
 
+    @RequestMapping("getReceiveAddressByMemberId")
+    public List<UmsMemberReceiveAddress> getReceiveAddressByMemberId(String memberId){
+        List<UmsMemberReceiveAddress> umsMemberReceiveAddresses = userService.getReceiveAddressByMemberId(memberId);
+        return umsMemberReceiveAddresses;
+    }
 
     @RequestMapping("index")
     @ResponseBody
